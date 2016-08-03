@@ -1,0 +1,46 @@
+{
+  "name": "flickr-manager",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --harmony test",
+    "watch": "nodemon --exec \"npm run test\" --watch src --watch test",
+    "format": "eslint --fix src test; exit 0",
+    "lint": "eslint src test; exit 0",
+    "check": "npm run lint && npm test",
+    "jest": "jest; exit 0"
+  },
+  "jest": {
+    "testRegex": "\\.test\\.js$"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalmanb/flickr-manager.git"
+  },
+  "keywords": [
+    "flickr"
+  ],
+  "author": "kalmanb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kalmanb/flickr-manager/issues"
+  },
+  "homepage": "https://github.com/kalmanb/flickr-manager#readme",
+  "bin": {
+    "apidoc": "./lib/index.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "exif": "^0.6.0",
+    "properties-reader": "0.0.15",
+    "read-yaml": "^1.0.0",
+    "superagent": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.2.2",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.12.0",
+    "jest-cli": "^14.1.0"
+  }
+}
